@@ -21,6 +21,8 @@ int	main( void )
 	otherStringArray = stringArray;
 	otherStringArray[3] = "I'm good, how about you?";
 
+
+	std::cout << "======-Good Value-======" << std::endl;
 	try
 	{
 		std::cout << stringArray[0] << std::endl;
@@ -29,7 +31,15 @@ int	main( void )
 	{
 		std::cout << e.what() << std::endl;
 	}
-
+	try
+	{
+		std::cout << stringArray[5] << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "======-Wrong Value-======" << std::endl;
 	try
 	{
 		std::cout << stringArray[-3] << std::endl;
